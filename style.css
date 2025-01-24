@@ -1,76 +1,86 @@
-.product-filter {
-  display: flex;
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
-.product-filter h1 {
-  flex-grow: 1;
-} 
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
 
-
-.collection-sort {
-  display: flex;
-  flex-direction: column;
+h1 {
+  margin: 0;
+  font-size: 32px;
 }
 
 .products {
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
-}
-
-.products {
-  display: flex;
-  flex-wrap: wrap;
+  padding: 20px;
 }
 
 .product-card {
-  padding: 2%;
-  flex-grow: 1;
-  flex-basis: 16%;
-
-  display: flex; /* so child elements can use flexbox stuff too! */
+  width: 30%;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 
-.product-card {
-  flex: 1 16%;
-}
-
-.product-image img {
-  max-width: 100%;
+.product-card img {
+  width: 100%;
+  height: auto;
 }
 
 .product-info {
-  margin-top: auto;
+  padding: 10px;
+  text-align: center;
 }
 
-@media (max-width: 920px) {
-  .product-card {
-    flex: 1 21%;
-  }
+.product-info h5, .product-info h6 {
+  margin: 0;
+  font-size: 18px;
 }
 
-/* Select the first two */
-.products .product-card:first-child, 
-.products .product-card:nth-child(2) {
-  flex: 2 46%;
+.product-info h6 {
+  color: #888;
+  margin-top: 5px;
 }
 
+/* Buy Now Button Styles */
+.buy-now {
+  background-color: #007BFF; /* Blue background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.buy-now:hover {
+  background-color: #0056b3; /* Darker blue when hovering */
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 600px) {
   .product-card {
-    flex: 1 46%;
+    width: 45%;
   }
 }
 
-@media (max-width: 480px) {
-  .product-filter {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 480px) {
-  .product-filter {
-    flex-direction: column;
-  }
-  .sort {
-    align-self: flex-start;
+@media (max-width: 400px) {
+  .product-card {
+    width: 100%;
   }
 }
